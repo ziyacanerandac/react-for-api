@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
      return  res.json(JSON.parse(results.rows[0].response_data));
     } else {
       // Google Places API'ye istek gönder
-      axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${longitude}%${latitude}&radius=${radius}&key=AIzaSyD9cE0PqjMMOglhfT_ccwMjXzWo2tKkHWw`, {
+      axios.get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${longitude}%${latitude}&radius=${radius}&key=secret`, {
       })
         .then((response) => {
 
